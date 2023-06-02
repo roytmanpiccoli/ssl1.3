@@ -1,0 +1,42 @@
+Input Plaintext                     Initial Round Key
++-----------------+               +-----------------+
+|                 |               |                 |
+|    Plaintext    |               |   Round Key 0   |
+|                 |               |                 |
++-----------------+               +-----------------+
+         |                                   |
+         v                                   v
+     SubBytes                              XOR
++-----------------+               +-----------------+
+|                 |               |                 |
+|    Substituted  |               |    Substituted  |
+|    Plaintext    |               |    Round Key    |
+|                 |               |                 |
++-----------------+               +-----------------+
+         |                                   |
+         v                                   v
+    ShiftRows                             XOR
++-----------------+               +-----------------+
+|                 |               |                 |
+|    Shifted      |               |    Mixed        |
+|    Plaintext    |               |    Columns      |
+|                 |               |                 |
++-----------------+               +-----------------+
+         |                                   |
+         v                                   v
+   MixColumns                             XOR
++-----------------+               +-----------------+
+|                 |               |                 |
+|   Mixed         |               |   Round Key     |
+|   Columns       |               |   XORed with    |
+|                 |               |   Mixed Columns |
++-----------------+               +-----------------+
+         |                                   |
+         v                                   v
+    AddRoundKey                           XOR
++-----------------+               +-----------------+
+|                 |               |                 |
+|  Encrypted      |               |    Encrypted    |
+|  Block          |               |    Block        |
+|                 |               |                 |
++-----------------+               +-----------------+
