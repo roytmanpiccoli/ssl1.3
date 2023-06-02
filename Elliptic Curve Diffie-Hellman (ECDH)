@@ -1,0 +1,32 @@
+        Party A                                     Party B
+
+    Generate Private Key                         Generate Private Key
+    (A_priv)                                     (B_priv)
+
+          |                                             |
+          |                                             |
+          v                                             v
+
+    Generate Public Key                          Generate Public Key
+    (A_pub = A_priv * Base Point)                (B_pub = B_priv * Base Point)
+
+          |                                             |
+          |                                             |
+          v                                             v
+
+    Exchange Public Key                          Exchange Public Key
+    (A_pub)                                      (B_pub)
+
+          |                                             |
+          |                                             |
+          v                                             v
+
+    Calculate Shared Secret                      Calculate Shared Secret
+    (Shared Secret = A_priv * B_pub)             (Shared Secret = B_priv * A_pub)
+
+          |                                             |
+          |                                             |
+          v                                             v
+
+    Derive Shared Secret                          Derive Shared Secret
+    (Symmetric Encryption Key)                    (Symmetric Encryption Key)
