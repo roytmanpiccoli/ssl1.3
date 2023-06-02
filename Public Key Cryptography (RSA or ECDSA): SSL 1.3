@@ -1,0 +1,34 @@
+            Client                                                  Server
+  -----------------------------------------------------------------------------------------------
+  Generate Key Pair (Public/Private)                                  |
+             |                                                        |
+             |                                                        |
+             v                                                        v
+        Encrypt                                                       |
+        Pre-Master                                                    |
+        Secret with                                                   |
+        Server's                                                      |
+        Public Key                                                    |
+             |                                                        |
+             |                                                        |
+             v                                                        v
+        Send Encrypted                                            Decrypt
+        Pre-Master                                                Pre-Maste Secret
+        Secret to Server                                              |
+             |                                                        |
+             |                                                        |
+             v                                                        v
+        Decrypt                                                  Generate Key Pair
+        Pre-Master                                               (Public/Private)
+        Secret with Server's                                          |
+        Private Key                                                   |
+             |                                                        |
+             |                                                        |
+             v                                                        v
+        Generate                                                     Encrypt
+        Session Keys                                                Session Keys
+             |                                                        |
+             |                                                        |
+             v                                                        v
+       Establish                                                   Establish
+     Secure Session                                              Secure Session
